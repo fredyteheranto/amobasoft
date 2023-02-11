@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #E5E5E5;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.calendar-month {
+  position: relative;
+  background-color: var(--grey-200);
+}
+
+.calendar-month-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.calendar-month-header-selected-month {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.calendar-month-header-selectors {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80px;
+}
+
+.calendar-month-header-selectors>* {
+  cursor: pointer;
+}
+
+.day-of-week {
+  color: var(--grey-800);
+  font-size: 18px;
+  background-color: #fff;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+.day-of-week,
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day-of-week>* {
+  text-align: center;
+  padding-right: 5px;
+}
+
+.days-grid {
+  height: 100%;
+  position: relative;
+  grid-column-gap: 0;
+  width: 100%;
+
+}
+
+.calendar-day {
+  position: relative;
+  min-height: 100px;
+  font-size: 16px;
+  background-color: #fff;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-day>span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 2px;
+  border-radius: 30px;
+  height: 80px;
+  width: 80px;
+
+}
+
+.dayDisable,
+.calendar-day--not-current {
+  color: #9C8D8D;
+}
+
+.dayDisableCalendar {
+  background: #FFF2D9;
+  color: #000;
+}
+
+.dayReserved {
+  background: #27AE60;
+  color: #fff;
+}
+
+.dayNotReserved {
+  background: #C0392B;
+  color: #fff;
+}
+
+.dayFullReserved {
+  background: #DFDFDF;
+  color: #000;
+}
